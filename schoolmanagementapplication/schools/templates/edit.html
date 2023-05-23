@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit : School Information</title>
+</head>
+<body>
+
+<form method="POST" action="/update/{{school.id}}">
+    {%csrf_token%}
+    <div>
+        <label>School Id</label>
+        <label>
+            <input type="text" name="schoolId" value="{{school.schoolId}}">
+        </label>
+    </div>
+
+    <div>
+        <label>School Name</label>
+        <label>
+            <input type="text" name="name" value="{{school.name}}">
+        </label>
+    </div>
+
+    <div>
+        <label>School Email</label>
+        <label>
+            <input type="text" name="email" value="{{school.email}}">
+        </label>
+    </div>
+
+    <div>
+        <label>School Contact</label>
+        <label>
+            <input type="text" name="contact" value="{{school.contact}}">
+        </label>
+    </div>
+
+    <div>
+        <button type="submit">Update</button>
+    </div>
+
+</form>
+
+</body>
+</html>
